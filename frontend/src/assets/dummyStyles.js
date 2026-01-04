@@ -1,6 +1,8 @@
+// assets/dummyStyles.js
+
 export const bannerStyles = {
   // Layout and container styles
-  container: "relative md:pt-25 xl:pt-25 pt-21 sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] pt-6 sm:pt-20 lg:pt-25 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-8 bg-gradient-to-br from-blue-50 via-white to-purple-50 animate-gradient-bg rounded-3xl",
+  container: "relative md:pt-25 xl:pt-25 pt-21 sm:min-h-[520px] md:min-h-[560px] lg:min-h-[600px] pt-6 sm:pt-8 lg:pt-25 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 py-8 bg-gradient-to-br from-blue-50 via-white to-purple-50 animate-gradient-bg rounded-3xl",
   
   // Floating icons wrapper
   floatingIconsWrapper: "absolute inset-0 pointer-events-none overflow-visible z-0",
@@ -18,14 +20,16 @@ export const bannerStyles = {
   leftContent: "space-y-5 sm:space-y-6",
   
   // Badge
-  badge: "inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold animate-fade-in font-cursive",
-  badgeIcon: "w-4 h-4 text-blue-500",
-  
+ badge: "inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium shadow-sm",
+badgeIcon: "w-4 h-4 text-blue-600",
+
   // Heading
-  heading: "text-3xl sm:text-4xl lg:text-5xl font-cursive font-heading uppercase tracking-wider leading-tight",
-  headingSpan1: "block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-text-gradient",
-  headingSpan2: "block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-text-gradient animation-delay-300",
-  
+  heading: "text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight",
+headingSpan1:
+  "block text-gray-900",
+headingSpan2:
+  "block text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-teal-600 hover:opacity-90 transition-opacity",
+
   videoModal: {
     overlay: "fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn",
     container: "relative w-[90%] max-w-3xl aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/20",
@@ -35,20 +39,31 @@ export const bannerStyles = {
   },
 
   // Description
-  description: "text-lg sm:text-xl font-body italic font-[pacifico] font-semibold text-gray-700 leading-relaxed mt-2 sm:mt-4",
+  description:
+  "text-lg sm:text-xl font-medium leading-relaxed mt-3 sm:mt-4 max-w-xl text-transparent bg-clip-text bg-gradient-to-r from-slate-600 via-gray-700 to-slate-800",
+
   
   // Features
-  featuresGrid: "grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 animate-fade-in opacity-0 animation-delay-700",
-  featureItem: "flex items-center space-x-3",
-  featureIconContainer: "w-6 h-6 flex items-center justify-center shrink-0",
-  featureIcon: "text-sm",
-  featureText: "text-gray-700 font-cursive text-sm sm:text-base",
+featuresGrid:
+  "grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mt-4",
+featureItem:
+  "group flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-all duration-300",
+featureIconContainer:
+  "w-7 h-7 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 shrink-0 group-hover:bg-blue-100 transition-colors duration-300",
+featureIcon:
+  "text-sm",
+featureText:
+  "text-gray-700 text-sm sm:text-base font-medium group-hover:text-gray-900 transition-colors duration-300",
+
   
   // Buttons
-  buttonsContainer: "flex flex-col sm:flex-row gap-3 sm:gap-4 pt-3 animate-fade-in opacity-0 animation-delay-900",
-  buttonGetStarted: "px-6 py-3 sm:px-8 sm:py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-200 transition-all duration-300 transform font-cursive text-sm sm:text-base text-center",
-  buttonViewDemo: "px-6 py-3 sm:px-8 sm:py-3 bg-white cursor-pointer text-gray-700 font-semibold rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 transform font-cursive text-sm sm:text-base text-center",
-  
+  buttonsContainer:
+  "flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4",
+buttonGetStarted:
+  "px-6 py-3 sm:px-8 sm:py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base tracking-wide text-center",
+buttonViewDemo:
+  "px-6 py-3 sm:px-8 sm:py-3 bg-white text-gray-700 font-medium rounded-xl text-blue border border-gray-200 shadow-sm hover:bg-gray-50 hover:shadow-md transition-all duration-300 text-sm sm:text-base tracking-wide text-center",
+
   // Image
   imageContainer: "flex items-center justify-center",
   image: "w-full max-w-[220px] sm:max-w-sm md:max-w-md lg:max-w-sm h-auto rounded-2xl shadow-2xl border border-white/70 animate-float"
@@ -345,18 +360,40 @@ export const aboutUsStyles = {
   valueUnderline: "absolute bottom-0 left-0 w-0 group-hover:w-full h-1 bg-gradient-to-r transition-all duration-500",
   
   // Team Section
-  teamSection: "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100",
-  teamHeader: "text-center mb-16",
-  teamTitle: "text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-gray-900 mb-4 font-serif",
-  teamSubtitle: "text-xl text-gray-600 max-w-2xl mx-auto",
-  teamGrid: "grid md:grid-cols-2 lg:grid-cols-4 gap-8",
-  teamMember: "text-center font-[pacifico] group cursor-pointer",
-  teamImageContainer: "relative mb-6",
-  teamImage: "w-48 h-48 mx-auto rounded-full transform transition-all duration-500",
-  teamName: "text-2xl font-bold text-gray-900 mb-2 transition-colors",
-  teamRole: "text-blue-600 italic font-semibold mb-2",
-  teamBio: "text-gray-600 mb-4",
-  
+  teamSection:
+  "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-sky-50 via-white to-blue-50",
+
+teamHeader:
+  "text-center mb-14",
+
+teamTitle:
+  "text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight",
+
+teamSubtitle:
+  "text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed",
+
+teamGrid:
+  "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center",
+
+
+teamMember:
+  "group flex flex-col items-center text-center p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer",
+
+teamImageContainer:
+  "relative mb-5",
+
+teamImage:
+  "w-28 h-28 rounded-full overflow-hidden shadow-md transition-transform duration-500 group-hover:scale-105",
+
+teamName:
+  "text-lg sm:text-xl font-semibold text-slate-800 mb-1 transition-colors group-hover:text-slate-900",
+
+teamRole:
+  "text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500 mb-2",
+
+teamBio:
+  "text-sm text-slate-600 leading-relaxed max-w-xs",
+
   // Testimonials Section
   testimonialsSection: "py-20 px-4 sm:px-6 lg:px-8 bg-white",
   testimonialsHeader: "text-center mb-16",
@@ -373,7 +410,7 @@ export const aboutUsStyles = {
   testimonialAuthorRole: "text-gray-600 text-sm",
   
   // CTA Section
-  ctaSection: "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-200 via-purple-500 to-indigo-300 relative overflow-hidden",
+  ctaSection: "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-200 via-blue-500 to-cyan-300 relative overflow-hidden",
   ctaOrb1: "absolute top-0 left-0 w-72 h-72 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse",
   ctaOrb2: "absolute bottom-0 right-0 w-96 h-96 bg-white/50 rounded-full translate-x-1/2 translate-y-1/2 animate-pulse animation-delay-2000",
   ctaContent: "relative max-w-4xl mx-auto text-center",
@@ -421,19 +458,21 @@ export const contactStyles = {
   
   // Header
   header: "text-center mb-12 sm:mb-16",
-  title: "text-3xl sm:text-4xl md:text-5xl inline-flex items-center space-x-2 mt-15 rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-purple-100 font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-['Poppins']",
+  title: "text-3xl sm:text-4xl md:text-5xl inline-flex items-center space-x-2 mt-15 rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-cyan-50 font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent font-['Poppins']",
   
   // Main Section
   mainSection: "grid grid-cols-1 font-serif lg:grid-cols-2 md:grid-cols-2 md:gap-2 gap-10 lg:gap-12 items-center",
   
   // Contact Form
-  formContainer: "relative order-2 lg:order-1",
-  formGlow1: "absolute -inset-1 bg-gradient-to-r from-purple-300 to-blue-500 rounded-2xl opacity-75 blur-sm animate-pulse",
-  formGlow2: "absolute -inset-1 bg-gradient-to-r from-purple-300 to-blue-500 rounded-2xl opacity-50 animate-pulse delay-75",
-  formGlow3: "absolute -inset-1 bg-gradient-to-r from-purple-300 to-blue-500 rounded-2xl opacity-25 animate-pulse delay-150",
-  form: "relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100",
-  formElements: "space-y-6",
-  
+  formContainer:
+  "relative order-2 lg:order-1",
+
+form:
+  "relative bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300",
+
+formElements:
+  "space-y-6",
+
   // Form Grid
   formGrid: "grid grid-cols-1 md:grid-cols-2 gap-6",
   
@@ -554,7 +593,7 @@ export const coursePageStyles = {
 
 export const myCoursesStyles = {
   // Layout and container styles
-  pageContainer: "min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 font-[pacifico]",
+  pageContainer: "min-h-screen pt-25 bg-gradient-to-br from-blue-50 to-indigo-100 py-8 font-[pacifico]",
   mainContainer: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
   
   // Header
@@ -563,25 +602,25 @@ export const myCoursesStyles = {
   emptyText: "text-gray-600 text-lg",
   
   // Grid layout
-  grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8",
+  grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 gap-8",
   
   // Course card
   courseCard: "group bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/50 cursor-pointer",
   imageContainer: "relative overflow-hidden",
-  courseImage: "w-full h-48 object-contain pb-7.5 lg:pb-6 xl:pb-8.5 transition-transform duration-700",
+  courseImage: "w-full h-48 object-contain pb-7.5 lg:pb-6 xl:pb-8.5 md:object-cover transition-transform duration-700",
   courseContent: "p-5",
   
   // Course info
   courseName: "text-lg font-bold text-gray-800 mb-3 line-clamp-2 transition-colors duration-300",
-  infoContainer: "flex items-center justify-between mb-4",
+  infoContainer: "flex flex flex-col gap-2   justify-between mb-4",
   
   // Rating
-  ratingContainer: "flex items-center space-x-1 bg-yellow-50 rounded-full px-3 py-1 border border-yellow-100",
+  ratingContainer: "flex  items-center space-x-1 bg-yellow-50 rounded-full px-3 py-1 border border-yellow-100",
   ratingIcon: "w-4 h-4 text-yellow-500 fill-current",
   ratingText: "text-sm font-semibold text-gray-800",
   
   // Teacher
-  teacherContainer: "flex items-center space-x-1 bg-blue-50 rounded-full px-3 py-1 border border-blue-100",
+  teacherContainer: "flex items-center space-x-1 px-3 py-1",
   teacherIcon: "w-4 h-4 text-blue-600",
   teacherText: "text-sm font-medium text-gray-800 truncate max-w-[80px]",
   
@@ -643,11 +682,11 @@ export const facultyStyles = {
   container: "min-h-screen pt-12 sm:pt-16 bg-gradient-to-br from-blue-50 via-white to-purple-50",
   
   // Header Section
-  header: "relative py-12 sm:py-16 px-4 text-center bg-gradient-to-br from-blue-50 via-white to-purple-50",
+  header: "relative py-12 sm:py-16 px-4 text-center bg-gradient-to-br from-blue-50 via-white to-cyan-50",
   headerContent: "relative z-10 max-w-4xl mx-auto",
-  title: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-500 mb-3 sm:mb-4 font-cinematic tracking-wide",
+  title: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-800 mb-3 sm:mb-4 font-cinematic tracking-wide",
   titleDivider: "w-20 sm:w-28 h-1 bg-gradient-to-r from-blue-200 to-sky-500 mx-auto mb-4 rounded-full",
-  subtitle: "text-base sm:text-lg md:text-xl text-blue-500 max-w-2xl mx-auto leading-relaxed",
+  subtitle: "text-base sm:text-lg md:text-xl text-sky-500 max-w-2xl mx-auto leading-relaxed",
   
   // Faculty Grid
   facultySection: "py-8 px-4 sm:px-6 lg:px-8",
@@ -722,14 +761,27 @@ export const footerStyles = {
   container: "relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16",
   
   // Grid layout
-  grid: "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-12 mb-12 sm:mb-16",
-  brandSection: "lg:col-span-1",
-  brandTransform: "transform transition-transform duration-500",
-  brandContainer: "relative mb-4 sm:mb-6 group",
-  brandGradient: "absolute -inset-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl blur-lg opacity-12 sm:opacity-20 transition-all duration-500 pointer-events-none",
-  brandTitle: "text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-purple-600 py-1",
-  brandDescription: "text-slate-600 leading-relaxed mb-4 text-sm sm:text-sm",
-  
+ grid:
+  "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-10 mb-12 sm:mb-16",
+
+brandSection:
+  "lg:col-span-1",
+
+brandTransform:
+  "transition-transform duration-500 hover:-translate-y-1",
+
+brandContainer:
+  "relative mb-4 sm:mb-6 group",
+
+brandGradient:
+  "absolute -inset-3 rounded-2xl bg-gradient-to-r from-sky-400/25 via-cyan-400/20 to-blue-500/25 blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none",
+
+brandTitle:
+  "text-2xl sm:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-slate-800 via-blue-800 to-slate-900",
+
+brandDescription:
+  "text-slate-600 leading-relaxed text-sm sm:text-base max-w-sm",
+
   // Section headers
   sectionHeader: "text-lg font-semibold mb-4 text-slate-700 flex items-center gap-2",
   sectionIcon: "w-5 h-5",
@@ -745,7 +797,7 @@ export const footerStyles = {
   contactIconContainer: "flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center mr-3 sm:mr-4 transform transition-transform duration-300 shadow-lg border border-white overflow-hidden",
   contactIcon: "w-4 h-4",
   contactTextContainer: "min-w-0",
-  contactTextPrimary: "font-medium text-sm break-words",
+  contactTextPrimary: "font-medium text-sm break-words xl:text-xs",
   contactTextSecondary: "text-xs text-slate-500",
   
   // Social section
@@ -840,8 +892,8 @@ export const homeCoursesStyles = {
   
   // Header Section
   header: "flex flex-col items-center gap-6",
-  title: "text-3xl sm:text-4xl md:text-4xl mb-0 text-center bg-gradient-to-r from-indigo-600 via-pink-500 to-purple-500 text-transparent bg-clip-text drop-shadow-lg flex items-center justify-center gap-3",
-  titleIcon: "w-7 h-7 md:w-8 md:h-8 animate-spin-slow text-indigo-400",
+  title: "text-3xl sm:text-4xl md:text-4xl mb-0 text-center bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-500 text-transparent bg-clip-text drop-shadow-lg flex items-center justify-center gap-3",
+  titleIcon: "w-7 h-7 md:w-8 md:h-8 animate-spin- text-blue-400",
   
   // Courses Grid
   coursesGrid: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-10",
@@ -927,11 +979,10 @@ export const navbarStyles = {
   desktopNavItem: "group relative px-4 py-2 rounded-xl transition-all duration-300 flex items-center space-x-2",
   desktopNavItemActive: "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 shadow-md",
   desktopNavIcon: "text-gray-600 transition-colors duration-300 group-hover:text-blue-600",
-  desktopNavText: " ml-3 mt-0 text-sm font-medium text-gray-700 group-hover:text-blue-600",
+  desktopNavText: "text-sm font-medium text-gray-700 group-hover:text-blue-600",
   
   // Auth Buttons
   authContainer: "flex items-center space-x-3 flex-shrink-0",
-  createAccountButton: "hidden lg:flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-semibold shadow-sm hover:shadow-md transform transition-all duration-300 group",
   loginButton: "hidden lg:flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-sm font-semibold shadow-sm hover:shadow-md transform transition-all duration-300 group",
   logoutButton: "hidden lg:flex items-center space-x-2 px-4 py-2 rounded-xl bg-white text-sm font-semibold shadow-sm hover:shadow-md transform transition-all duration-300 group border border-gray-200",
   
@@ -954,12 +1005,7 @@ export const navbarStyles = {
   // Mobile Auth Buttons
   mobileLoginButton: "w-full flex items-center justify-center space-x-2 p-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold shadow-sm hover:shadow-md transition-all duration-300 mt-2",
   mobileLogoutButton: "w-full flex items-center justify-center space-x-2 p-3 rounded-xl bg-white text-gray-800 font-semibold shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300 mt-2",
-  mobileCreateAccountButton:
-  "w-full mt-4 flex items-center justify-center gap-2 px-4 py-3 rounded-xl \
-   bg-gradient-to-r from-sky-600 to-cyan-600 text-white font-semibold text-base \
-   shadow-md hover:shadow-lg active:scale-[0.98] transition-all duration-300",
-
-
+  
   // Background Pattern
   backgroundPattern: "absolute inset-0 -z-10 opacity-20",
   pattern: "absolute inset-0 bg-[radial-gradient(#60a5fa_1px,transparent_1px)] [background-size:16px_16px]"
@@ -1042,21 +1088,37 @@ export const testimonialStyles = {
   container: "max-w-6xl mx-auto text-center mb-12 sm:mb-16",
   
   // Header
-  badge: "inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-indigo-100 mb-4 sm:mb-6",
-  badgeDot: "w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse",
-  badgeText: "text-sm font-medium text-indigo-700",
-  title: "text-3xl sm:text-4xl md:text-5xl font-bold font-[Montserrat] mb-3 sm:mb-6",
-  titleGradient: "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-pink-500 to-purple-600",
-  subtitle: "text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed",
-  
+  badge:
+  "group inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/70 backdrop-blur-md border border-indigo-200 shadow-md mb-5 sm:mb-7 hover:scale-105 hover:shadow-lg transition-all duration-300",
+
+badgeDot:
+  "w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 animate-ping",
+
+badgeText:
+  "text-sm font-semibold text-indigo-700 tracking-wide group-hover:text-indigo-900 transition-colors",
+
+title:
+  "text-4xl sm:text-5xl md:text-6xl font-extrabold font-[Montserrat] mb-4 sm:mb-6 leading-tight",
+
+titleGradient:
+  "bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 animate-gradient-shimmer",
+
+subtitle:
+  "text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed hover:text-gray-800 transition-colors duration-300",
+
   // Testimonials Grid
   grid: "max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 px-2 sm:px-0",
   
   // Testimonial Card
-  cardWrapper: "relative group",
-  glowBorder: "absolute -inset-2 rounded-3xl bg-gradient-to-r from-indigo-400/30 via-pink-400/20 to-purple-400/30 blur-xl opacity-60 transition-all duration-700 pointer-events-none",
-  backgroundPattern: "absolute inset-0 rounded-2xl bg-gradient-to-br from-white/85 to-indigo-50/30 backdrop-blur-sm border border-white/50 pointer-events-none",
-  
+ cardWrapper:
+  "relative group isolate transition-transform duration-500 hover:-translate-y-1",
+
+glowBorder:
+  "absolute -inset-3 rounded-[2rem] bg-gradient-to-r from-cyan-400/30 via-sky-400/25 to-blue-500/30 blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none",
+
+backgroundPattern:
+  "absolute inset-0 rounded-2xl bg-gradient-to-br from-white/90 via-sky-50/60 to-cyan-50/40 backdrop-blur-md border border-white/60 shadow-lg group-hover:shadow-xl transition-all duration-500 pointer-events-none",
+
   // Floating Elements
   floatingElement1: "absolute -left-4 -top-4 w-16 h-16 rounded-full bg-gradient-to-br from-pink-200/40 to-purple-200/40 blur-xl animate-float-slow pointer-events-none hidden sm:block",
   floatingElement2: "absolute -right-6 -bottom-6 w-20 h-20 rounded-full bg-gradient-to-br from-indigo-200/40 to-blue-200/40 blur-xl animate-float pointer-events-none hidden sm:block",
@@ -1075,12 +1137,22 @@ export const testimonialStyles = {
   quoteIconSvg: "w-10 h-10 sm:w-12 sm:h-12",
   
   // Content Layout
-  content: "flex items-start gap-4 mb-4 sm:mb-6",
-  avatarContainer: "avatar-container relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex-shrink-0 transform transition-transform duration-500",
-  avatarWrapper: "relative w-full h-full rounded-2xl overflow-hidden",
-  avatarImage: "avatar-img w-full h-full object-cover object-center",
-  avatarGlow: "absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-400/20 to-pink-400/20 blur-md -z-10 animate-pulse-slow",
-  
+content:
+  "flex items-start gap-4 mb-4 sm:mb-6",
+
+avatarContainer:
+  "relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex-shrink-0 transition-transform duration-500 group-hover:scale-105",
+
+avatarWrapper:
+  "relative w-full h-full rounded-2xl overflow-hidden shadow-md",
+
+avatarImage:
+  "w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110",
+
+avatarGlow:
+  "absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400/25 via-sky-400/20 to-blue-500/25 blur-lg opacity-70 group-hover:opacity-100 transition-opacity duration-500 -z-10",
+
+
   // User Info
   userInfo: "flex-1 min-w-0",
   userHeader: "flex flex-col md:flex-row items-start md:items-center justify-between mb-2 gap-2",

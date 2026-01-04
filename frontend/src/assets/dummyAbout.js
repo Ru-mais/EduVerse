@@ -6,6 +6,8 @@ import AT1   from "../assets/AT1.png"
 import AT2 from "../assets/AT2.png"
 import AT3 from "../assets/AT3.png"
 
+
+
 import {
   Users,
   BookOpen,
@@ -128,33 +130,27 @@ export const missionVisionValues = [
 
 export const teamMembers = [
   {
-    name: "Sarah Johnson",
+    name: "Rumais p p",
     role: "Founder & CEO",
-    image:A1,
+    image:A4,
     bio: "15+ years in education technology",
     social: ["twitter", "linkedin", "github"],
   },
   {
-    name: "Michael Chen",
+    name: "Mashroof",
     role: "Chief Learning Officer",
     image:A2,
     bio: "Former university professor and curriculum expert",
     social: ["twitter", "linkedin"],
   },
   {
-    name: "Emily Rodriguez",
+    name: "Anaz",
     role: "Product Director",
-    image:A3,
+    image:A4,
     bio: "Specialized in user experience and learning design",
     social: ["twitter", "linkedin", "dribbble"],
   },
-  {
-    name: "David Kim",
-    role: "Tech Lead",
-    image:A4,
-    bio: "Full-stack developer and system architect",
-    social: ["twitter", "linkedin", "github"],
-  },
+  
 ];
 
 export const values = [
@@ -223,21 +219,21 @@ export const milestones = [
 
 export const testimonials = [
   {
-    name: "Alex Thompson",
+    name: "Neeraj k v",
     role: "Software Developer",
     image:AT1,
-    text: "LearnHub transformed my career. The courses are comprehensive and the support is exceptional.",
+    text: "EduVerse transformed my career. The courses are comprehensive and the support is exceptional.",
     rating: 5,
   },
   {
-    name: "Maria Garcia",
+    name: "Sarang ks",
     role: "Data Scientist",
     image:AT2,
     text: "The quality of instruction and hands-on projects helped me land my dream job.",
     rating: 5,
   },
   {
-    name: "James Wilson",
+    name: "Arshith",
     role: "UX Designer",
     image:AT3,
     text: "Best investment I've made in my professional development. Highly recommended!",

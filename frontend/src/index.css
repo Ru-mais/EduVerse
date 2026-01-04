@@ -1,1 +1,22 @@
+
+@keyframes soft-gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.perspective {
+  perspective: 1000px;
+}
+
+.group-hover\:rotate-x-6:hover {
+  transform: rotateX(6deg);
+}
+
+.group-hover\:-rotate-y-6:hover {
+  transform: rotateY(-6deg);
+}
+
+.animate-soft-gradient {
+  background-size: 200% 200%;
+  animation: soft-gradient 8s ease-in-out infinite alternate;
+}
 @import "tailwindcss";

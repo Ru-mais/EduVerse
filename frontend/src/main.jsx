@@ -1,21 +1,25 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { ClerkProvider } from "@clerk/clerk-react";
+import App from "./App";
+import "./index.css";
 
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App.jsx'
-import { ClerkProvider } from '@clerk/clerk-react'
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+// PASTE YOUR CLERK PUBLISHABLE_KEY HERE
+// TO GET IT GO TO https://clerk.com/docs/react/getting-started/quickstart
 
-  const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+if (!PUBLISHABLE_KEY) {
+  throw new Error('Add your Clerk Publishable Key to the .env file')
+}
 
-  if (!PUBLISHABLE_KEY) {
-    throw new Error('Add your Clerk Publishable Key to the .env file')
-  }
+// THEN SIGNUP HERE
+// THEN YOU WILL GET YOUR KEY AFTER CREATING THE PROJECT.
 
-createRoot(document.getElementById('root')).render(
-     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl={'/'}>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+ <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ClerkProvider>
-
-)
+);
